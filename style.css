@@ -1,56 +1,56 @@
+* {
+  margin: 0px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
-  }
-  
-  header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-  }
-  
-  h1 {
-    margin: 0;
-    font-size: 28px;
-  }
-  
-  form {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    max-width: 500px;
-    margin: 0 auto;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-  
-  input[type="text"],
-  input[type="email"],
-  input[type="number"],
-  input[type="text"] {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-  }
-  
-  select {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-  }
-  
-  button[type="submit"] {
-  }
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+main .pdv{
+  display: flex;
+}
+
+main .pdv .painel{
+background-color: aquamarine;
+width: 500px;
+height: 500px;
+border-radius: 1em 0px 1em 0px;
+}
+
+main .abas button{
+  border: none;
+  display: flex;
+  width: 10em;
+  height: 6em;
+  display: flex;
+  align-items: center;
+  text-align: center !important;
+}
+
+main .abas .aba_venda{
+  background-color: yellow;
+}
+
+main .abas .aba_delivery{
+  background-color: greenyellow;
+}
+
+main .painel_de_botoes button{
+  appearance: none;
+  border: none;
+  outline: none;
+}

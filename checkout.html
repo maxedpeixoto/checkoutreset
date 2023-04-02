@@ -1,38 +1,34 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Checkout da Sorveteria</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <header>
-      <h1>Checkout da Sorveteria</h1>
-    </header>
-    <main>
-      <form>
-        <h2>Informações do cliente</h2>
-        <label for="name">Nome:</label>
-        <input type="text" id="name" name="name">
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email">
-        <h2>Informações do pedido</h2>
-        <label for="flavors">Sabor:</label>
-        <select id="flavors" name="flavors">
-          <option value="chocolate">Chocolate</option>
-          <option value="baunilha">Baunilha</option>
-          <option value="morango">Morango</option>
-        </select>
-        <label for="quantity">Quantidade:</label>
-        <input type="number" id="quantity" name="quantity" min="1" max="10" value="1">
-        <h2>Informações de pagamento</h2>
-        <label for="card">Número do cartão:</label>
-        <input type="text" id="card" name="card">
-        <label for="expiration">Data de validade:</label>
-        <input type="text" id="expiration" name="expiration">
-        <label for="cvv">CVV:</label>
-        <input type="text" id="cvv" name="cvv">
-        <button type="submit">Finalizar compra</button>
-      </form>
-    </main>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDV Oppamilk</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1>Oppamilk</h1>
+  </header>
+  <main>
+    <div class="pdv">
+      <div class="abas">
+        <button class="aba_venda">Vendas</button>
+        <button class="aba_delivery">Delivery</button>
+      </div>
+      <div class="painel">
+      </div>
+      <div class="painel_de_botoes">
+        <button>Nova venda</button>
+        <button>Delivery</button>
+        <button>Suprimento / Sangria</button>
+        <button>Abrir caixa</button>
+      </div>
+    </div>
+    <div class="rodape"></div>
+  </main>
+</body>
+
 </html>
