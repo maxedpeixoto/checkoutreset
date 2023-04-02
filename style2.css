@@ -1,0 +1,76 @@
+/*Cabeçalho*/
+* {
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+    appearance: none;
+    border: none;
+    outline: none;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+}
+
+header {
+    background-color: #333;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+header h1 {
+    margin: 0;
+    color: #fff;
+    font-size: 30px;
+}
+
+main {
+    height: 90%;
+}
+
+/*Fim do Cabeçalho*/
+
+.pdv {
+    display: flex;
+    background-color: bisque;
+    height: 100%;
+}
+
+/*Apenas as abas*/
+.abas {
+    flex-basis: 0;
+    flex-grow: 1;
+    margin: 10px 0px 10px 10px;
+    display: grid;
+    gap: 10px;
+}
+
+.abas button {
+    background-color: aqua;
+    border-radius: 20px 0px 0px 20px;
+}
+
+/*Apenas o painel central*/
+.painel {
+    flex-basis: 0;
+    flex-grow: 5;
+    border: 3px solid red;
+}
+
+/*Apenas o painel de botoes*/
+.painel_de_botoes {
+    flex-basis: 0;
+    flex-grow: 2;
+    display: grid;
+    margin: 10px 20px 10px 10px;
+    grid-template-columns: 50% 50%;
+    gap: 10px;
+}
+
+.painel_de_botoes button {
+
+    border-radius: 20px;
+}

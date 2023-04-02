@@ -4,9 +4,11 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
+  height: 100%;
+  margin: 0;
 }
 
 header {
@@ -20,25 +22,29 @@ h1 {
   font-size: 28px;
 }
 
+main{
+  height: 100%;
+  width: 100%; 
+}
+
 main .pdv{
   display: flex;
+  background-color: aquamarine;
 }
 
 main .pdv .painel{
-background-color: aquamarine;
-width: 500px;
-height: 500px;
 border-radius: 1em 0px 1em 0px;
+}
+
+main .abas{
+  display: grid;
 }
 
 main .abas button{
   border: none;
   display: flex;
-  width: 10em;
-  height: 6em;
-  display: flex;
   align-items: center;
-  text-align: center !important;
+  text-align: center;
 }
 
 main .abas .aba_venda{
@@ -47,6 +53,10 @@ main .abas .aba_venda{
 
 main .abas .aba_delivery{
   background-color: greenyellow;
+}
+
+main .painel_de_botoes{
+  display: grid;
 }
 
 main .painel_de_botoes button{
