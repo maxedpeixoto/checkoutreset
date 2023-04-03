@@ -1,66 +1,133 @@
+/*Cabeçalho*/
 * {
-  margin: 0px;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+    appearance: none;
+    border: none;
+    outline: none;
+    font-family: Arial, sans-serif;
 }
 
-html, body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-  height: 100%;
-  margin: 0;
+body {
+    height: 100vh;
 }
 
 header {
-  background-color: #333;
-  color: #fff;
-  padding: 10px;
+    background-color: #333;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
 }
 
-h1 {
-  margin: 0;
-  font-size: 28px;
+header h1 {
+    margin: 0;
+    color: #fff;
+    font-size: 30px;
 }
 
-main{
-  height: 100%;
-  width: 100%; 
+main {
+    height: 90%;
 }
 
-main .pdv{
-  display: flex;
-  background-color: aquamarine;
+/*Fim do Cabeçalho*/
+
+.pdv {
+    display: flex;
+    background-color: #F7F7F7;
+    height: 100%;
 }
 
-main .pdv .painel{
-border-radius: 1em 0px 1em 0px;
+/*Apenas as abas*/
+.abas {
+    flex-basis: 0;
+    flex-grow: 1;
+    margin: 10px 0px 10px 10px;
+    display: grid;
+    gap: 10px;
+    grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
 }
 
-main .abas{
-  display: grid;
+.abas button {
+    background-color: lightsteelblue;
+    border-radius: 20px 0px 0px 20px;
 }
 
-main .abas button{
-  border: none;
-  display: flex;
-  align-items: center;
-  text-align: center;
+/*Apenas o painel central*/
+.painel {
+    flex-basis: 0;
+    flex-grow: 5;
+    border: 3px solid red;
+    margin: 10px 5px 10px 0px;
 }
 
-main .abas .aba_venda{
-  background-color: yellow;
+/*Apenas o painel de botoes*/
+.painel_de_botoes {
+    flex-basis: 0;
+    flex-grow: 2;
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: 50% 50%;
+    gap: 10px;
+    padding: 10px 15px 10px 10px;
 }
 
-main .abas .aba_delivery{
-  background-color: greenyellow;
+.painel_de_botoes button {
+    font-size: 1em;
+    font-weight: 700;
+    border-radius: 20px;
+    transition: box-shadow 0.3s;
+    margin: 0 0;
 }
 
-main .painel_de_botoes{
-  display: grid;
+.painel_de_botoes button:hover {
+    box-shadow: 0 0 10px #555;
 }
 
-main .painel_de_botoes button{
-  appearance: none;
-  border: none;
-  outline: none;
+.painel_de_botoes button:active {
+    background-color: #333;
+    opacity: 0.8;
+}
+
+.painel_de_botoes button h2 {
+    font-size: 1.3em;
+    color: white;
+    padding: 10px;
+}
+
+.painel_de_botoes button img {
+    height: 60px;
+}
+
+.nova_venda {
+    background-color: red;
+}
+
+.delivery {
+    background-color: greenyellow;
+}
+
+.pesquisar {
+    background-color: lightpink;
+}
+
+.caixa {
+    background-color: lightskyblue;
+}
+
+.suprimento {
+    background-color: lightgreen;
+}
+
+.sangria {
+    background-color: lightcoral;
+}
+
+.exportar {
+    background-color: lightblue;
+}
+
+.relatorio {
+    background-color: #888;
 }
