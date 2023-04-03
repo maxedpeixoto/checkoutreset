@@ -18,13 +18,37 @@ header {
     height: 10%;
     display: flex;
     align-items: center;
-    padding-left: 20px;
+    padding: 0px 20px 0px 20px;
 }
 
 header h1 {
     margin: 0;
     color: #fff;
     font-size: 30px;
+}
+
+header .nome_empresa {
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+header .status_caixa {
+    flex-basis: 0;
+    flex-grow: 4;
+    text-align: center;
+    font-size: 40px;
+}
+
+header .data {
+    flex-basis: 0;
+    flex-grow: 1;
+    text-align: end;
+}
+
+header .hora {
+    flex-basis: 0;
+    flex-grow: 1;
+    text-align: end;
 }
 
 main {
@@ -58,8 +82,9 @@ main {
 .painel {
     flex-basis: 0;
     flex-grow: 5;
-    border: 3px solid red;
+    border-radius: 0 20px 20px 0;
     margin: 10px 5px 10px 0px;
+    border: 10px solid lightsteelblue;
 }
 
 /*Apenas o painel de botoes*/
