@@ -9,18 +9,18 @@
   <script src="functions.js"></script>
 </head>
 
-<body>
+<body onload="document.getElementById('tab1Btn').click();mostrarDataAtual();">
   <header>
     <h1 class="nome_empresa">Oppamilk</h1>
     <h1 class="status_caixa">Caixa Aberto</h1>
-    <h1 class="data">03/04/2023</h1>
-    <h1 class="hora">12:00:00</h1>
+    <h1 class="data"><span id="data-atual"></h1>
+    <h1 class="hora"><span id="hora-atual"></span></h1>
   </header>
   <main>
     <div class="pdv">
       <div class="abas">
-        <button class="tablinks" onclick="openTab(event, 'tab1')">
-          <h2>Vendas</h2>
+        <button id="tab1Btn" class="tablinks" onclick="openTab(event, 'tab1')">
+          <h2>Comandas</h2>
         </button>
         <button class="tablinks" onclick="openTab(event, 'tab2')">
           <h2>Delivery</h2>
@@ -56,10 +56,10 @@
       </div>
       <div class="painel_de_botoes">
         <button class="nova_venda">
-          <h2>Nova venda</h2><img src="./imagens/sale.png">
+          <h2>+ Comanda</h2><img src="./imagens/sale.png">
         </button>
         <button class="delivery">
-          <h2>Delivery</h2><img src="./imagens/fast-delivery.png">
+          <h2>+ Delivery</h2><img src="./imagens/fast-delivery.png">
         </button>
         <button class="pesquisar">
           <h2>Pesquisar</h2><img src="./imagens/pesquisar.png">
