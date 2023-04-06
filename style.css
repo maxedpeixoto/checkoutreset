@@ -71,11 +71,36 @@ main {
     display: grid;
     gap: 10px;
     grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    overflow: hidden;
 }
 
 .abas button {
-    background-color: lightsteelblue;
     border-radius: 20px 0px 0px 20px;
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+.abas button:hover {
+    background-color: #ddd;
+}
+
+.abas button.active {
+    background-color: lightsteelblue;
+}
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+}
+
+.tabcontent h2 {
+    margin-top: 0;
 }
 
 /*Apenas o painel central*/

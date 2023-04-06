@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PDV Oppamilk</title>
   <link rel="stylesheet" href="style.css">
+  <script src="functions.js"></script>
 </head>
 
 <body>
@@ -18,24 +19,66 @@
   <main>
     <div class="pdv">
       <div class="abas">
-        <button class="aba_comandas"><h2>Vendas</h2></button>
-        <button class="aba_delivery"><h2>Delivery</h2></button>
-        <button class="aba_cancelados"><h2>Cancelados</h2></button>
-        <button class="aba_finalizados"><h2>Finalizados</h2></button>
-        <button class="aba_conrrigir"><h2>Corrigir</h2></button>
-        <button class="aba_cotacao"><h2>Cotação</h2></button>
+        <button class="tablinks" onclick="openTab(event, 'tab1')">
+          <h2>Vendas</h2>
+        </button>
+        <button class="tablinks" onclick="openTab(event, 'tab2')">
+          <h2>Delivery</h2>
+        </button>
+        <button class="tablinks" onclick="openTab(event, 'tab3')">
+          <h2>Cancelados</h2>
+        </button>
+        <button class="tablinks" onclick="openTab(event, 'tab4')">
+          <h2>Finalizados</h2>
+        </button>
+        <button class="tablinks" onclick="openTab(event, 'tab5')">
+          <h2>Corrigir</h2>
+        </button>
+        <button class="tablinks" onclick="openTab(event, 'tab6')">
+          <h2>Cotação</h2>
+        </button>
       </div>
       <div class="painel">
+        <div id="tab1" class="tabcontent">
+          <h2>Conteúdo da Aba 1</h2>
+          <p>Este é o conteúdo da aba 1.</p>
+        </div>
+
+        <div id="tab2" class="tabcontent">
+          <h2>Conteúdo da Aba 2</h2>
+          <p>Este é o conteúdo da aba 2.</p>
+        </div>
+
+        <div id="tab3" class="tabcontent">
+          <h2>Conteúdo da Aba 3</h2>
+          <p>Este é o conteúdo da aba 3.</p>
+        </div>
       </div>
       <div class="painel_de_botoes">
-        <button class="nova_venda"><h2>Nova venda</h2><img src="./imagens/sale.png"></button>
-        <button class="delivery"><h2>Delivery</h2><img src="./imagens/fast-delivery.png"></button>
-        <button class="pesquisar"><h2>Pesquisar</h2><img src="./imagens/pesquisar.png"></button>
-        <button class="caixa"><h2>Abrir caixa</h2><img src="./imagens/caixa.png"></button>
-        <button class="suprimento"><h2>Suprimento</h2><img src="./imagens/suprimento.png"></button>
-        <button class="sangria"><h2>Sangria</h2><img src="./imagens/sangria.png"></button>
-        <button class="exportar"><h2>Exportar</h2><img src="./imagens/exportar.png"></button>
-        <button class="relatorio"><h2>Relatório</h2><img src="./imagens/relatorio.png"></button>
+        <button class="nova_venda">
+          <h2>Nova venda</h2><img src="./imagens/sale.png">
+        </button>
+        <button class="delivery">
+          <h2>Delivery</h2><img src="./imagens/fast-delivery.png">
+        </button>
+        <button class="pesquisar">
+          <h2>Pesquisar</h2><img src="./imagens/pesquisar.png">
+        </button>
+        <button class="caixa">
+          <h2>Abrir caixa</h2><img src="./imagens/caixa.png">
+        </button>
+        <button class="suprimento">
+          <h2>Suprimento</h2><img src="./imagens/suprimento.png">
+        </button>
+        <button class="sangria">
+          <h2>Sangria</h2><img src="./imagens/sangria.png">
+        </button>
+        <button class="exportar">
+          <h2>Exportar</h2><img src="./imagens/exportar.png">
+        </button>
+        <button class="relatorio">
+          <h2>Relatório</h2><img src="./imagens/relatorio.png">
+        </button>
       </div>
     </div>
     <div class="rodape"></div>
