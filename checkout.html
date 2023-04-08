@@ -12,7 +12,7 @@
 <body onload="document.getElementById('tab1Btn').click();mostrarDataAtual();">
   <header>
     <h1 class="nome_empresa">Oppamilk</h1>
-    <h1 class="status_caixa">Caixa Aberto</h1>
+    <h1 class="status_caixa">Turno Aberto</h1>
     <h1 class="data"><span id="data-atual"></h1>
     <h1 class="hora"><span id="hora-atual"></span></h1>
   </header>
@@ -26,10 +26,10 @@
           <h2>Delivery</h2>
         </button>
         <button class="tablinks" onclick="openTab(event, 'tab3')">
-          <h2>Cancelados</h2>
+          <h2>Finalizados</h2>
         </button>
         <button class="tablinks" onclick="openTab(event, 'tab4')">
-          <h2>Finalizados</h2>
+          <h2>Notas Emitidas</h2>
         </button>
         <button class="tablinks" onclick="openTab(event, 'tab5')">
           <h2>Corrigir</h2>
@@ -52,6 +52,20 @@
         <div id="tab3" class="tabcontent">
           <h2>Conteúdo da Aba 3</h2>
           <p>Este é o conteúdo da aba 3.</p>
+
+        </div><div id="tab4" class="tabcontent">
+          <h2>Conteúdo da Aba 4</h2>
+          <p>Este é o conteúdo da aba 4.</p>
+        </div>
+
+        <div id="tab5" class="tabcontent">
+          <h2>Conteúdo da Aba 5</h2>
+          <p>Este é o conteúdo da aba 5.</p>
+        </div>
+
+        <div id="tab6" class="tabcontent">
+          <h2>Conteúdo da Aba 6</h2>
+          <p>Este é o conteúdo da aba 6.</p>
         </div>
       </div>
       <div class="painel_de_botoes">
@@ -65,7 +79,7 @@
           <h2>Pesquisar</h2><img src="./imagens/pesquisar.png">
         </button>
         <button class="caixa">
-          <h2>Abrir caixa</h2><img src="./imagens/caixa.png">
+          <h2>Abrir Turno</h2><img src="./imagens/caixa.png">
         </button>
         <button class="suprimento">
           <h2>Suprimento</h2><img src="./imagens/suprimento.png">

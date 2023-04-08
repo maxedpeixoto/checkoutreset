@@ -1,3 +1,4 @@
+// Interação com a abas 
 function openTab(evt, tabName) {
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
@@ -21,7 +22,6 @@ function mostrarHoraAtual() {
     const horaAtual = `${hora}:${minuto}:${segundo}`;
     document.getElementById('hora-atual').innerText = horaAtual;
 }
-
 // Chama a função a cada segundo para atualizar a hora
 setInterval(mostrarHoraAtual, 1000);
 
