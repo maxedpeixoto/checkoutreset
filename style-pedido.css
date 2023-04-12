@@ -1,0 +1,54 @@
+* {
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+    appearance: none;
+    border: none;
+    outline: none;
+    font-family: Arial, sans-serif;
+}
+
+/* estilo para centralizar o formulário */
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #5753A6;
+    padding-bottom: 15px;
+    height: 400px;
+    width: 400px;
+    border-radius: 20px;
+}
+
+label {
+    margin-top: 10px;
+    color: #FFF;
+}
+
+input {
+    border: solid 1px;
+    border-color: #333;
+}
+
+.painel_de_botoes .modal button {
+    font-size: 1em;
+    font-weight: 700;
+    border-radius: 10px;
+    transition: box-shadow 0.3s;
+    margin: 0 0;
+    background-color: lightgreen;
+    color: #FFF;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.painel_de_botoes .modal button:hover {
+    box-shadow: 0 0 6px #555;
+}
+
+.painel_de_botoes .modal button:active {
+    background-color: #333;
+    opacity: 0.8;
+}

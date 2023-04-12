@@ -12,7 +12,7 @@
 <body onload="document.getElementById('tab1Btn').click();mostrarDataAtual();">
   <header>
     <h1 class="nome_empresa">Oppamilk</h1>
-    <h1 class="status_caixa">Turno Aberto</h1>
+    <h1 class="status_caixa">Turno Fechado</h1>
     <h1 class="data"><span id="data-atual"></h1>
     <h1 class="hora"><span id="hora-atual"></span></h1>
   </header>
@@ -53,7 +53,8 @@
           <h2>Conteúdo da Aba 3</h2>
           <p>Este é o conteúdo da aba 3.</p>
 
-        </div><div id="tab4" class="tabcontent">
+        </div>
+        <div id="tab4" class="tabcontent">
           <h2>Conteúdo da Aba 4</h2>
           <p>Este é o conteúdo da aba 4.</p>
         </div>
@@ -69,29 +70,41 @@
         </div>
       </div>
       <div class="painel_de_botoes">
-        <button class="nova_venda">
-          <h2>+ Comanda</h2><img src="./imagens/sale.png">
+        <button id="botao_comanda"class="nova_venda">
+          <h2>+ Comanda</h2>
+          <img src="./imagens/sale.png">
         </button>
+        <dialog>
+          <input type="text" id="comanda" name="comanda">
+          <label for="produto">Número da Comanda</label>
+        </dialog>
         <button class="delivery">
-          <h2>+ Delivery</h2><img src="./imagens/fast-delivery.png">
+          <h2>+ Delivery</h2>
+          <img src="./imagens/fast-delivery.png">
         </button>
         <button class="pesquisar">
-          <h2>Pesquisar</h2><img src="./imagens/pesquisar.png">
+          <h2>Pesquisar</h2>
+          <img src="./imagens/pesquisar.png">
         </button>
         <button class="caixa">
-          <h2>Abrir Turno</h2><img src="./imagens/caixa.png">
+          <h2>Abrir Turno</h2>
+          <img src="./imagens/caixa.png">
         </button>
         <button class="suprimento">
-          <h2>Suprimento</h2><img src="./imagens/suprimento.png">
+          <h2>Suprimento</h2>
+          <img src="./imagens/suprimento.png">
         </button>
         <button class="sangria">
-          <h2>Sangria</h2><img src="./imagens/sangria.png">
+          <h2>Sangria</h2>
+          <img src="./imagens/sangria.png">
         </button>
         <button class="exportar">
-          <h2>Exportar</h2><img src="./imagens/exportar.png">
+          <h2>Exportar</h2>
+          <img src="./imagens/exportar.png">
         </button>
         <button class="relatorio">
-          <h2>Relatório</h2><img src="./imagens/relatorio.png">
+          <h2>Relatório</h2>
+          <img src="./imagens/relatorio.png">
         </button>
       </div>
     </div>

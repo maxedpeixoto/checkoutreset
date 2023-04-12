@@ -14,7 +14,7 @@ body {
 }
 
 header {
-    background-color: #333;
+    background-color: #5753A6;
     height: 10%;
     display: flex;
     align-items: center;
@@ -90,7 +90,8 @@ main {
 }
 
 .abas button.active {
-    background-color: lightsteelblue;
+    background-color: #5753A6;
+    color: #FFF;
 }
 
 .tabcontent {
@@ -109,7 +110,7 @@ main {
     flex-grow: 5;
     border-radius: 0 20px 20px 0;
     margin: 10px 5px 10px 0px;
-    border: 10px solid lightsteelblue;
+    border: 10px solid #5753A6;
     grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
     grid-template-columns: 25% 25% 25% 25%;
 }
@@ -183,3 +184,5 @@ main {
 .relatorio {
     background-color: #888;
 }
+
+/* ATÉ AQUI ESTÁ TUDO OK - NÃO MEXER */

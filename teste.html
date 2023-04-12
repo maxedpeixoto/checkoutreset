@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PDV Oppamilk</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="functions.js"></script>
+</head>
+
+<body onload="document.getElementById('tab1Btn').click();mostrarDataAtual();">
+  <header>
+    <h1 class="nome_empresa">Oppamilk</h1>
+    <h1 class="status_caixa">Turno Fechado</h1>
+    <h1 class="data"><span id="data-atual"></h1>
+    <h1 class="hora"><span id="hora-atual"></span></h1>
+  </header>
+  <main>
+    <div class="pdv">
+      <div class="abas">
+        <button id="tab1Btn" class="tablinks" onclick="openTab(event, 'tab1')">
+          <h2>Comandas</h2>
+        </button>
+        <button class="tablinks" onclick="openTab(event, 'tab2')">
+          <h2>Delivery</h2>
+        </button>
+        <button class="tablinks" onclick="openTab(event, 'tab3')">
+          <h2>Finalizados</h2>
+        </button>
+        <button class="tablinks" onclick="openTab(event, 'tab4')">
+          <h2>Notas Emitidas</h2>
+        </button>
+        <button class="tablinks" onclick="openTab(event, 'tab5')">
+          <h2>Corrigir</h2>
+        </button>
+        <button class="tablinks" onclick="openTab(event, 'tab6')">
+          <h2>Cotação</h2>
+        </button>
+      </div>
+      <div class="painel">
+        <div id="tab1" class="tabcontent">
+          <h2>Conteúdo da Aba 1</h2>
+          <p>Este é o conteúdo da aba 1.</p>
+        </div>
+
+        <div id="tab2" class="tabcontent">
+          <h2>Conteúdo da Aba 2</h2>
+          <p>Este é o conteúdo da aba 2.</p>
+        </div>
+
+        <div id="tab3" class="tabcontent">
+          <h2>Conteúdo da Aba 3</h2>
+          <p>Este é o conteúdo da aba 3.</p>
+
+        </div><div id="tab4" class="tabcontent">
+          <h2>Conteúdo da Aba 4</h2>
+          <p>Este é o conteúdo da aba 4.</p>
+        </div>
+
+        <div id="tab5" class="tabcontent">
+          <h2>Conteúdo da Aba 5</h2>
+          <p>Este é o conteúdo da aba 5.</p>
+        </div>
+
+        <div id="tab6" class="tabcontent">
+          <h2>Conteúdo da Aba 6</h2>
+          <p>Este é o conteúdo da aba 6.</p>
+        </div>
+      </div>
+      <div class="painel_de_botoes">
+        <button class="nova_venda">
+          <div id="add-comanda" onclick="openComandaPopup()"><h2>+ Comanda</h2></div><img src="./imagens/sale.png">
+        </button>
+        <button class="delivery">
+          <h2>+ Delivery</h2><img src="./imagens/fast-delivery.png">
+        </button>
+        <button class="pesquisar">
+          <h2>Pesquisar</h2><img src="./imagens/pesquisar.png">
+        </button>
+        <button class="caixa">
+          <h2>Abrir Turno</h2><img src="./imagens/caixa.png">
+        </button>
+        <button class="suprimento">
+          <h2>Suprimento</h2><img src="./imagens/suprimento.png">
+        </button>
+        <button class="sangria">
+          <h2>Sangria</h2><img src="./imagens/sangria.png">
+        </button>
+        <button class="exportar">
+          <h2>Exportar</h2><img src="./imagens/exportar.png">
+        </button>
+        <button class="relatorio">
+          <h2>Relatório</h2><img src="./imagens/relatorio.png">
+        </button>
+      </div>
+    </div>
+    <div class="rodape"></div>
+  </main>
+</body>
+
+</html>
+
+// A PARTIR DAQUI É O CÓDIGO DO ARQUIVO style.css //
+
+/*Cabeçalho*/
+* {
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+    appearance: none;
+    border: none;
+    outline: none;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+}
+
+header {
+    background-color: #5753A6;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    padding: 0px 20px 0px 20px;
+}
+
+header h1 {
+    margin: 0;
+    color: #fff;
+    font-size: 30px;
+}
+
+header .nome_empresa {
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+header .status_caixa {
+    flex-basis: 0;
+    flex-grow: 4;
+    text-align: center;
+    font-size: 40px;
+}
+
+header .data {
+    flex-basis: 0;
+    flex-grow: 1;
+    text-align: end;
+}
+
+header .hora {
+    flex-basis: 0;
+    flex-grow: 1;
+    text-align: end;
+}
+
+main {
+    height: 90%;
+}
+
+/*Fim do Cabeçalho*/
+
+.pdv {
+    display: flex;
+    background-color: #F7F7F7;
+    height: 100%;
+}
+
+/*Apenas as abas*/
+.abas {
+    flex-basis: 0;
+    flex-grow: 1;
+    margin: 10px 0px 10px 10px;
+    display: grid;
+    gap: 10px;
+    grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    overflow: hidden;
+}
+
+.abas button {
+    border-radius: 20px 0px 0px 20px;
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+}
+
+.abas button:hover {
+    background-color: #ddd;
+}
+
+.abas button.active {
+    background-color: #5753A6;
+    color: #FFF;
+}
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+}
+
+.tabcontent h2 {
+    margin-top: 0;
+}
+
+/*Apenas o painel central*/
+.painel {
+    flex-basis: 0;
+    flex-grow: 5;
+    border-radius: 0 20px 20px 0;
+    margin: 10px 5px 10px 0px;
+    border: 10px solid #5753A6;
+    grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+/*Apenas o painel de botoes*/
+.painel_de_botoes {
+    flex-basis: 0;
+    flex-grow: 2;
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: 50% 50%;
+    gap: 10px;
+    padding: 10px 15px 10px 10px;
+}
+
+.painel_de_botoes button {
+    font-size: 1em;
+    font-weight: 700;
+    border-radius: 20px;
+    transition: box-shadow 0.3s;
+    margin: 0 0;
+}
+
+.painel_de_botoes button:hover {
+    box-shadow: 0 0 10px #555;
+}
+
+.painel_de_botoes button:active {
+    background-color: #333;
+    opacity: 0.8;
+}
+
+.painel_de_botoes button h2 {
+    font-size: 1.3em;
+    color: white;
+    padding: 10px;
+}
+
+.painel_de_botoes button img {
+    height: 60px;
+}
+
+.nova_venda {
+    background-color: red;
+}
+
+.delivery {
+    background-color: greenyellow;
+}
+
+.pesquisar {
+    background-color: lightpink;
+}
+
+.caixa {
+    background-color: lightskyblue;
+}
+
+.suprimento {
+    background-color: lightgreen;
+}
+
+.sangria {
+    background-color: lightcoral;
+}
+
+.exportar {
+    background-color: lightblue;
+}
+
+.relatorio {
+    background-color: #888;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid black;
+    padding: 20px;
+  }
+
+  // A PARTIR DAQUI É O CÓDIGO DO ARQUIVO function.js //
+
+  // obtém a hora atual do computador
+function mostrarHoraAtual() {
+    const data = new Date();
+    const hora = String(data.getHours()).padStart(2, '0');
+    const minuto = String(data.getMinutes()).padStart(2, '0');
+    const segundo = String(data.getSeconds()).padStart(2, '0');
+    const horaAtual = `${hora}:${minuto}:${segundo}`;
+    document.getElementById('hora-atual').innerText = horaAtual;
+}
+// Chama a função a cada segundo para atualizar a hora
+setInterval(mostrarHoraAtual, 1000);
+
+// obtém a Data atual do computador
+function mostrarDataAtual() {
+    let data = new Date();
+    let options = { day: '2-digit', month: '2-digit', year: 'numeric' };
+    let dataFormatada = data.toLocaleDateString('pt-BR', options);
+    document.getElementById('data-atual').innerHTML = dataFormatada;
+}
+// Chama a função a cada segundo para atualizar a data 
+setInterval(mostrarDataAtual, 1000);
+
+let popup;
+
+function openComandaPopup() {
+    // Crie um novo elemento HTML para a janela pop-up
+    popup = document.createElement("div");
+    popup.classList.add("popup");
+    // Adicione o HTML do formulário dentro da janela pop-up
+    popup.innerHTML = `
+      <form>
+        <label for="comanda">Comanda:</label>
+        <input type="text" id="comanda" name="comanda">
+        <label for="produto">Produto:</label>
+        <input type="text" id="produto" name="produto">
+        <label for="quantidade">Quantidade:</label>
+        <input type="number" id="quantidade" name="quantidade">
+        <label for="preco-unitario">Preço Unitário:</label>
+        <input type="number" id="preco-unitario" name="preco-unitario">
+        <label for="preco-total">Preço Total:</label>
+        <input type="number" id="preco-total" name="preco-total">
+        <button type="submit">Adicionar</button>
+        <button id="fechar" type="button">Fechar</button>
+      </form>
+    `;
+    // Adicione a janela pop-up ao corpo do documento
+    document.body.appendChild(popup);
+
+    popup.querySelector("form").addEventListener("submit", function(event) {
+      // Impedir o envio padrão do formulário
+      event.preventDefault();
+      // Lógica para adicionar o pedido à comanda
+      // ...
+      // Remova a janela pop-up
+      popup.remove();
+    });
+}
+
+function abrirPopUp() {
+    // define o tamanho da janela
+    const largura = 600;
+    const altura = 600;
+    const esquerda = (window.innerWidth - largura) / 2;
+    const topo = (window.innerHeight - altura) / 2;
+  
+    // define as opções da janela
+    const opcoes = `
+      width=${largura},
+      height=${altura},
+      left=${esquerda},
+      top=${topo},
+      resizable=no,
+      scrollbars=no,
+      location=no,
+      toolbar=no,
+      menubar=no,
+      status=no
+    `;
+  
+    // abre a nova janela com as opções definidas
+    const novaJanela = window.open('novo-pedido.html', 'Novo Pedido', opcoes);
+  
+    // adiciona um evento para fechar a janela
+    const fecharJanela = () => {
+      novaJanela.close();
+    };
+    novaJanela.document.getElementById('fechar').addEventListener('click', fecharJanela);
+  
+    // adiciona um evento para impedir cliques na aplicação principal
+    const impedirCliques = (event) => {
+      event.stopPropagation();
+      event.preventDefault();
+      novaJanela.focus();
+    };
+    document.querySelectorAll('body > *:not(.popup)').forEach((element) => {
+      element.addEventListener('click', impedirCliques);
+    });
+  
+    // remove os eventos quando a janela é fechada
+    novaJanela.addEventListener('unload', () => {
+      novaJanela.document.getElementById('fechar').removeEventListener('click', fecharJanela);
+      document.querySelectorAll('body > *:not(.popup)').forEach((element) => {
+        element.removeEventListener('click', impedirCliques);
+      });
+    });
+  }

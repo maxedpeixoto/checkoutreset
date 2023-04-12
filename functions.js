@@ -34,3 +34,11 @@ function mostrarDataAtual() {
 }
 // Chama a função a cada segundo para atualizar a data 
 setInterval(mostrarDataAtual, 1000);
+
+// Até aqui está tudo ok - NÃO MEXER //
+const botao_comanda = document.querySelector("#botao_comanda");
+const modal = document.querySelector("dialog");
+
+botao_comanda.addEventListener("click", function () {
+    modal.showModal()
+});
